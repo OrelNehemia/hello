@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akslab-4af8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akslab-4af8"
+  template:
+    metadata:
+      labels:
+        app: "akslab-4af8"
+    spec:
+      containers:
+        - name: "akslab-4af8"
+          image: "acrdemo0007.azurecr.io/akslab"
+          ports:
+          - containerPort: 80
